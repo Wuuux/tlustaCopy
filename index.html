@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Republika Sztuki Tłusta Langusta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+
+      <div id="myNavbar" class="collapse navbar-collapse" >
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#repertuar"      data-toggle="collapse in">REPERTUAR</a></li>
+          <li><a href="./strona.html"   data-toggle="collapse in">O NAS</a></li>
+          <li><a href="#kontakt"        data-toggle="collapse in">KONTAKT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!-- end of navigation bar -->
+
+
+
+  <!-- main page -->
+  <div id="page" class="container-fluid pageTlusta">
+    <div class="container mainPage">
+	      <div class="row">
+
+            <!-- left column : PICTURE-->
+            <div class="col-sm-2 col-md-2 col-lg-2" id="lewaKolumna">
+              <!-- <a href="./index.html"> -->
+                <img id="tlustaTlo" src="images/tlustaTlo.png" class="img-responsive">
+              <!-- </a> -->
+            </div>
+
+            <!-- right column : CONTENT-->
+            <div class="col-sm-10 col-md-10 col-lg-10 ">
+              <div class="row">
+                <!-- set of panel informations -->
+                <div class="panel-group">
+
+
+                <!-- actual programm panel -->
+                <div id="repertuar" class="panel panel-default" >
+
+                  <!-- title of month-->
+                  <!--
+				  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#infoSet" href="#nextMonthProgram">REPERTUAR</a>
+                    </h4>
+                  </div>
+-->
+
+                  <!-- content of month -->
+                  <div id="nextMonthProgram" class="panel-collapse collapse in">
+                    <div class="panel-body">
+
+                      <div class="row">
+                        <!-- left content column -->
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+          				        <div id="baza"></div>
+  						          </div>
+
+                        <div class="col-sm-3 col-md-3 col-lg-3 ramka">
+	                        <div class="warsztaty">
+  	                        <a href="./studio.html"><h3>Studio Aktorskie Porywaczy Ciał</h3></a>
+  	                        Każdy wtorek godz. 18:00
+	                        </div>
+  	                        <div class="warsztaty">
+  	                        <a href="./ciemnica.html"><h3>Pracownia CIEMNICA</h3></a>
+  	                        Zajęcia według harmonogramu
+  	                        </div>
+                            <div class="warsztaty">
+  	                        <a href="./nanodramy.html"><h3>NANODRAMY 2016</h3></a>
+  	                        festiwal małych form teatralnych
+  	                        </div>
+                            <div class="warsztaty">
+  	                        <a href="./wizyta.html"><h3>WIZYTA</h3></a>
+  	                        prezentacje spektakli w miejscowościach województwa wielkopolskiego
+  	                        </div>
+  						          </div>
+
+                      </div>
+                    </div>
+                  </div> <!-- content of month-->
+                </div> <!-- repertuar-->
+
+                </div>  <!-- panel group-->
+              </div>  <!-- row-->
+            </div>  <!-- content-->
+          </div>  <!-- row-->
+        </div> <!-- container-fluid -->
+
+    </div>  <!-- main page -->
+
+
+
+
+    <div id="rezerwacja">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Zamknij</span></button>
+              <h4 class="modal-title" id="myModalLabel">Tytuł okienka pop-up</h4>
+            </div>
+            <div id="modalForm" class="modal-body">
+              <p></p>
+              <form id="reservationForm" action='php/makeReservationx.php' method='GET'>
+              <span>e-mail:</span>
+              <input type='email'  name='email'><br>
+              <span>ilość:</span>
+              <input type='number' name='count' min="1" max="6">
+              <input type='text'   name='id' value='' disabled>
+              <div class="modal-body-button">REZERWACJA</div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+              <button type="button" class="btn btn-primary">Zapisz zmiany</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="biletInfo">
+      <!-- Modal -->
+      <div class="modal fade" id="modalBiletInfo" tabindex="-1" role="dialog" aria-labelledby="modalBiletInfoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Zamknij</span></button>
+              <h4 class="modal-title" id="modalBiletInfoLabel">BILETY ON-LINE</h4>
+            </div>
+            <div class="modal-body">
+              <p></p>
+
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+              <button type="button" class="btn btn-primary">Zapisz zmiany</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+		<!-- footer -->
+		<footer class="container-fluid" id="footer">
+		<div row class="container mainPage">
+			<div class="row">
+		      <div class="row mar-top-20">
+			      <div class="col-md-offset-4">
+			      <div class="col-md-8 col-sm-12 footer" id="kontakt">
+
+              					<h1>Republika&nbsp;Sztuki&nbsp;Tłusta&nbsp;Langusta</h1>
+              					ul.Gwarna 11, 61-702 Poznań</br>
+              					</br>
+
+              					<span class="glyphicon glyphicon-envelope"></span>  tlustalangusta.pl@gmail.com</br>
+
+              					<span class="glyphicon glyphicon-phone-alt"></span>  +48 882 877 655
+              					</br></br>
+              					<a data-toggle="collapse" data-parent="#infoSet" href="#newsletter"><span class="glyphicon glyphicon-check"></span> Zapisz się na newsletter</a></br>
+              					 <div class="panel-body">
+                  					 <div id="newsletter" class="panel-collapse collapse">
+                                <form action="php/newsletter.php" method="post" class="newsletterForm">
+                                  <fieldset>
+
+                                    <!-- Imię-->
+                                    <div>
+                                        <label><span>Imię</span>
+                                          <input id="imie" name="name" type="text" placeholder="np. Ala" required="" autofocus="">
+                                        </label>
+                                    </div>
+                                    <!-- Nazwisko-->
+                                    <div>
+                                        <label><span>Nazwisko</span>
+                                          <input id="nazwisko" name="familyName" type="text" placeholder="np. Makota" required="" autofocus="">
+                                        </label>
+                                    </div>
+
+                                    <!-- adres e-mail -->
+                                    <div>
+                                        <label><span>E-mail</span>
+                                          <input id="adresEmail" name="email" type="email" placeholder="ala@ma.kota" required="">
+                                        </label>
+                                    </div>
+
+                                    <input type="submit" value=" ZAPISZ SIĘ ">
+
+                                  </fieldset>
+                                </form>
+                              </div>
+                          </div>
+              </div>
+
+			      </div>
+
+
+		      </div>
+			 </div>
+		    </div>
+		  </footer>
+		<!-- end of footer -->
+    <div id="googleMap"></div>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Rezerwacje</title>
+	<style type="text/css">
+body {
+	margin: 2em 5em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+h1, legend {
+	font-family:Arial, Helvetica, sans-serif;
+}
+label, input, select {
+	display:block;
+}
+input, select {
+	margin-bottom: 1em;
+}
+fieldset {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+fieldset fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+input[type="checkbox"] {
+	display:inline;
+}
+.range {
+	margin-bottom:1em;
+}
+.card-type input, .card-type label {
+	display:inline-block;
+}
+	</style>
+</head>
+<body>
+		<form id="rezerwacje" action="zapisz.php" method="post">
+		<h1>Tłusta Langusta</h1>
+		  <fieldset>
+		    <legend>Rezerwacje</legend>
+				<!-- wydarzenia -->
+		    <div>
+		        <label>Na co masz apetyt?
+		        <select id="wydarzenia" name="wydarzenia" required="" autofocus="">
+							<option value="w1">02.02. "Zapis automatyczny" Maciej Adamczyk g.19:00</option>
+							<option value="w2">03.02. "Zapis automatyczny" Maciej Adamczyk g.19:00</option>
+							<option value="w3">04.02. "Zapis automatyczny" Maciej Adamczyk g.19:00</option>
+							<option value="w4">05.02. "Zapis automatyczny" Maciej Adamczyk g.19:00</option>
+							<option value="w5">06.02. "Zapis automatyczny" Maciej Adamczyk g.19:00</option>
+						</select>
+						</label>
+		    </div>
+				<!-- kod rezerwacji -->
+		    <div>
+		        <label>Stworz kod odbioru rezerwacji (np. 'Ala ma futro z kota')
+		        	<input id="kod" name="kod" type="text" placeholder="Kot ma pewne ale..." required="" autofocus="">
+						</label>
+		    </div>
+				<!-- adres e-mail -->
+		    <div>
+		    		<label>Adres e-mail
+		        	<input id="adresEmail" name="adresEmail" type="email" placeholder="ala@futro.kot" required="">
+						</label>
+		    </div>
+				<!-- ilość miejsc -->
+				<div>
+						<label>Ilość miejsc
+							<input id="howMany" name="howMany" type="number" required="" pattern="[0-9]" title="Im więcej tym lepiej" value="2">
+						</label>
+				</div>
+				<input type="submit" value="WYŚLIJ">
+		  </fieldset>
+
+		</form>
+
+</body></html>

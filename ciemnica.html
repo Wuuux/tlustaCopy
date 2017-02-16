@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Republika Sztuki Tłusta Langusta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/strona.css">
+
+
+</head>
+<body>
+
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html"><img src="images/tlusta/tlusta-logo-m.png" alt="tlusta-logo-m" width="15px" height="" /></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./index.html"   data-toggle="collapse in">REPERTUAR</a></li>
+          <li><a href="#kontakt"   data-toggle="collapse in">KONTAKT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navigation bar -->
+
+
+<!-- główne zdjęcie  -->
+<header class="container-fluid">
+	<div class=" header-img">
+		<div class="row">
+		<img src="images/tlusta/ciemnica.jpg" class="img-responsive " alt="tlusta01a" width="1760" height="" />
+      </div>
+		</div>
+	</div>
+</header>
+<!-- end -->
+
+
+<div row class="container mainPage">
+	<div class="row">
+
+		<!-- left column : PICTURE-->
+		<div class="col-sm-4 col-md-4 col-lg-4 lewa-strona" id="lewaKolumna">
+            <div class="article-title" >
+		        <h3>CIEMNICA</h3>
+		        <h4>Pracownia fotografii archaicznej </h4>
+	        </div>
+        </div>
+	        <div class="col-sm-8 col-md-8 col-lg-8 article" id="prawaKolumna">
+
+          W Ciemnicy prowadzone są wielorakie zajęcia z fotografii analogowej dla wszystkich grup wiekowych, wszystkich poziomów umiejętności, po prostu dla wszystkich.
+          </br></br>
+          Ciemnica oferuje zajęcia indywidualne i grupowe zarówno dla dzieci jak i dla tych młodych duchem.
+          </br></br>
+          Ciemnica to przestrzeń również dla tych bardziej samodzielnych, którzy potrzebują tylko zaciemnionego i spokojnego miejsca. Można tu znaleźć wszystkie potrzebne narzędzia, filmy, papiery światłoczułe i inne akcesoria.
+          </br></br>
+          Ciemnica prowadzi również wypożyczalnię aparatów analogowych, dzięki czemu można spróbować swoich sił nie posiadając własnego sprzętu.
+          </br></br>
+          Wszystkich zainteresowanych, któzy chcieliby się czegoś dowiedzieć na miejscu, zapraszamy w czwartki między 17 a 19, na dyżur fotograficzny, do Republiki Sztuki Tłusta Langusta przy ul. Gwarnej 11.
+          </br></br>
+          <a href='http://ciemnica.weebly.com/' class='link'>CIEMNICA.WEEBLY.COM</a>
+	        </div>
+        </div>
+	</div>
+</div>
+
+</body>
+
+
+<footer class="container-fluid" id="footer">
+<div row class="container mainPage">
+	<div class="row">
+      <div class="row mar-top-20">
+	      <div class="col-md-offset-4">
+	      <div class="col-md-4 col-sm-12 footer" id="kontakt">
+
+        			<strong >
+        			Republika Sztuki Tłusta Langusta </br></strong>
+        			ul.Gwarna 11, 61-702 Poznań</br>
+        			</br>
+
+        			E-mail: tlustalangusta.pl@gmail.com</br>
+
+        			Telefon: +48 882 877 655</br>
+        			</br>
+              <!-- newsletter -->
+              <a data-toggle="collapse" data-parent="#infoSet" href="#newsletter"><span class="glyphicon glyphicon-check"></span> Zapisz się na newsletter</a></br>
+               <div class="panel-body">
+                   <div id="newsletter" class="panel-collapse collapse">
+                      <form action="php/newsletter.php" method="post" class="newsletterForm">
+                        <fieldset>
+
+                          <!-- Imię-->
+                          <div>
+                              <label><span>Imię</span>
+                                <input id="imie" name="name" type="text" placeholder="np. Ala" required="" autofocus="">
+                              </label>
+                          </div>
+                          <!-- Nazwisko-->
+                          <div>
+                              <label><span>Nazwisko</span>
+                                <input id="nazwisko" name="familyName" type="text" placeholder="np. Makota" required="" autofocus="">
+                              </label>
+                          </div>
+
+                          <!-- adres e-mail -->
+                          <div>
+                              <label><span>E-mail</span>
+                                <input id="adresEmail" name="email" type="email" placeholder="ala@ma.kota" required="">
+                              </label>
+                          </div>
+
+                          <input type="submit" value=" ZAPISZ SIĘ ">
+
+                        </fieldset>
+                      </form>
+                    </div>
+                </div>
+              <!-- end of newsletter -->
+	      </div>
+
+
+      </div>
+	 </div>
+    </div>
+  </footer>
+</html>

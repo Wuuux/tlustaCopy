@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Newsletter</title>
+	<style type="text/css">
+body {
+	margin: 2em 5em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+h1, legend {
+	font-family:Arial, Helvetica, sans-serif;
+}
+label, input, select {
+	display:block;
+}
+input, select {
+	margin-bottom: 1em;
+}
+fieldset {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+fieldset fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+input[type="checkbox"] {
+	display:inline;
+}
+.range {
+	margin-bottom:1em;
+}
+.card-type input, .card-type label {
+	display:inline-block;
+}
+	</style>
+</head>
+<body>
+		<form id="newsletter" action="../php/programSave.php" method="post">
+		<h1>Program Tłustej Langusty</h1>
+		  <fieldset>
+		    <legend>Dodaj wydarzenie</legend>
+
+				<!-- Tytuł-->
+		    <div>
+		        <label>Tytuł
+		        	<input id="tytul" name="tytul" type="text" placeholder="Tytul" required="" autofocus="">
+						</label>
+		    </div>
+				<!-- Autor-->
+		    <div>
+		        <label>Autor: teatr, osoba, grupa
+		        	<input id="kto" name="kto" type="text" placeholder="Kto" required="" autofocus="">
+						</label>
+		    </div>
+				<!-- Data -->
+		    <div>
+		    		<label>Data
+		        	<input id="dzien" name="dzien" type="date" placeholder="" required="">
+						</label>
+		    </div>
+				<!-- Godzina-->
+		    <div>
+		    		<label>Godzina
+		        	<input id="godzina" name="godzina" type="text" placeholder="19:00" required="">
+						</label>
+		    </div>
+				<!-- Ilość miejsc -->
+				<div>
+						<label>Ilość miejsc
+							<input id="iloscMiejsc" name="iloscMiejsc" type="number" placeholder="20" value="20" required="">
+						</label>
+				</div>
+				<!-- Opis -->
+				<div>
+						<label>Opis<br>
+							<textarea id="opis" name="opis" required="" rows="4" cols="50">nslfnasd</textarea>
+						</label>
+				</div>
+				<!-- Rodzaj -->
+				<div>
+						<label>Rodzaj
+							<input id="rodzaj" name="rodzaj" type="text" placeholder="teatr" value="teatr" required="">
+						</label>
+				</div>
+				<!-- Plik -->
+				<div>
+						<label>Nazwa pliku
+							<input id="plik" name="plik" type="text" placeholder="*.jpg" required="">
+						</label>
+				</div>
+				<!-- Archiwum?-->
+				<div>
+						<label>Czy do archiwum
+							<select id="archiwum" name="archiwum" required="">
+								<option value="true">TAK</option>
+								<option value="false">NIE</option>
+							</select>
+						</label>
+				</div>
+				<!-- Bilety??? -->
+				<div>
+					<label>Czy biletowany?
+						<select id="bilety" name="bilety" required="">
+							<option value="true">TAK</option>
+							<option value="false">NIE</option>
+						</select>
+					</label>
+				</div>
+				<!-- Link do biletów-->
+				<div>
+						<label>Link do biletów
+							<input id="biletyURL" name="biletyURL" type="text" placeholder="" required="">
+						</label>
+				</div>
+				<!-- Rezerwacje??? -->
+				<div>
+					<label>Czy będzie możliwość rezerwacji?
+						<select id="rezerwacje" name="rezerwacje" required="">
+							<option value="true">TAK</option>
+							<option value="false">NIE</option>
+						</select>
+					</label>
+				</div>
+				<!-- Link do rezerwacji-->
+				<div>
+						<label>Link do rezerwacji
+							<input id="rezerwacjeURL" name="rezerwacjeURL" type="text" placeholder="" required="">
+						</label>
+				</div>
+
+
+				<input type="submit" value="WYŚLIJ">
+
+		  </fieldset>
+
+		</form>
+
+</body></html>

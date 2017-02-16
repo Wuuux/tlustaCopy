@@ -1,0 +1,333 @@
+/* xxxxx */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+
+
+body {
+	background-image: url(../images/oko.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: fixed;
+	font: 400 16px Open Sans, sans-serif;
+	line-height: 1.8em;
+	color: #f3f3f3;
+	background-color: #232323;
+}
+
+
+h2 {font-size: 26px; font-weight: 900;  }
+h3 {font-size: 36px; font-weight: 900; color : white;}
+h4 {font-size: 26px; line-height: 1.6em; font-weight: 200; margin-top: 30px; margin-bottom: 40px;}
+h5 {font-weight: 500; font-size: 0.8em;}
+
+.dzien {
+	font-size:26px;
+	font-weight: 900;
+	line-height: 1em;
+	text-align: left;
+	span:nth-child(1) {
+		display: block;
+	}
+	span:nth-child(2) {
+		font-size: small;
+		display: block;
+		margin-left: 8px;
+	}
+}
+
+.time {text-align: center;}
+
+.title > span {vertical-align: text-top;}
+
+.title > h2 {margin: 0px; font-weight: 900;}
+
+
+.panel-default {
+	border-color: rgba(255, 255, 255, 0);
+	.panel-heading {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+.panel {background-color: rgba(255, 255, 255, 0);}
+
+
+
+.panel-title a {
+	color : white;
+}
+
+
+
+#tlustaTlo { padding-top: 80px; display:block; }
+
+.navbar-brand {font-size: .8em; font-weight: 700; display: inline-block;}
+
+.wyda {
+			vertical-align: top;
+			padding:10px 0px;
+			margin: 5px 0px;
+			border-bottom :  1px solid rgba(0,0,0,0);
+			border-top :  1px solid rgba(0,0,0,0);
+			&:hover {
+			border-bottom:  1px solid #efefef;
+			border-top: 1px solid #efefef;
+			}
+			a {
+				color: #efefef;
+				&:link {
+					color: #efefef;
+			    background-color: transparent;
+			    text-decoration: !important;
+				}
+				&:hover {
+				    color: #efefef;
+				    background-color: rgba(255, 0, 0, 0.5);
+				    text-decoration: line-through;
+					}
+			}
+
+		&.past {
+			color : grey !important;
+			a {
+				color: grey;
+				&:link {
+					color: grey;
+			    background-color: transparent;
+			    text-decoration: !important;
+				}
+				&:hover {
+				    color: grey;
+				    background-color: rgba(255, 0, 0, 0.5);
+				    text-decoration: line-through;
+				    }
+			}
+		}
+		&.shownDescription {
+			background: rgba(0,0,0,0.5);
+		};
+}
+
+
+.icon-bar {background-image:url(../images/tlusta/tlusta-logo-m.png) }
+
+.footer { padding: 40px 0px; margin-left: 40px}
+
+@media (max-width: 767px) {
+		body 								{ background-image: none;}
+		#tlustaTlo 					{ display: none;}
+		.container-fluid 		{ margin: 0px; padding: 0px;}
+		h3, h4 							{ font-size: 1.2em; text-align: left;	}
+		h2.monthName 				{ padding-left: 3%};
+		.time {
+			text-align: left;
+		}
+		div.dzien {
+			span:nth-child(1) {
+				display: inline;
+				text-align: left;
+			}
+			span:nth-child(2) {
+				display: inline;
+				text-align: left;
+			}
+		}
+	.warsztaty { padding-left: 3%; padding-top: 10px;}
+}
+
+@media (max-width: 991px) {
+
+
+}
+@media (max-width: 1199px) {
+	.buy-ticket {
+		text-align: left;
+		a:nth-child(2) {
+			display: inline;
+			margin-left: 5px;
+
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.buy-ticket {
+		text-align: right;
+		a:nth-child(2) {
+			display: block;
+			float: right;
+		}
+	}
+}
+
+#googleMap {
+    width: 100%; /* Span the entire width of the screen */
+    height: 400px; /* Set the height to 400 pixels */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+body {
+	div.modal-body, div.modal-header {
+		color : black;
+	}
+
+	div.modal-footer {
+		color : red;
+		font-style: italic;
+	}
+
+	div.modal-body {
+		div.modal-body-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: grey;
+			padding: 2px 5px;
+			border-radius: 20px;
+			width : 40%;
+			margin-top: 5px;
+			&:hover {
+				background: lightgrey;
+			}
+		}
+	}
+}
+
+#modalForm, #modalNewsletterForm {
+	input {
+		padding: 0 5px;
+		margin: 2px 5px;
+	}
+	input[name='id'] {
+		display: none;
+  }
+	span {
+		width:20%;
+		display: inline-block;
+	}
+}
+
+.hiddenDescription {
+	display:none;
+}
+
+h2.monthName {
+
+	color : lightblue;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.modal {
+	transition: 0s;
+}
+
+form.newsletterForm {
+	div {
+		width : 100%;
+	}
+
+	span {
+		width : 120px;
+		display: inline-block;
+		float: left;
+	}
+
+	input {
+		display: inline-block;
+		float: left;
+		padding-left: 5px;
+	}
+
+	input[type='submit']:hover {
+		background: red;
+	}
+
+}
+
+.mainPage { margin-top: 120px; }
+
+#tlustaTlo {padding-right: 20%; padding-top: 0;}
+
+
+.panel-body {padding: 0;}
+
+.nopadding {padding: 0;}
+
+.descriptionProgramEvent {background-color: rgba(0, 0, 0, 0.5)}
+
+.descriptionProgramEvent > p {padding: 30px 15px; margin-bottom: 20px;}
+
+.wyda {vertical-align: top; padding: 15px 0px; margin: 0px 0px; border: none;}
+
+.wyda:hover { border: none; background-color: rgba(0, 0, 0, 0.5) }
+
+.wyda a { color: #efefef; }
+
+.wyda a:link { color: #efefef; background-color: transparent; text-decoration: !important; }
+
+.wyda a:hover { color: #efefef; background-color: rgba(255, 0, 0, 0.5); text-decoration: line-through; }
+
+.wyda.past { color: grey !important; }
+
+.wyda.past a { color: grey; }
+
+.wyda.past a:link { color: grey; background-color: transparent; text-decoration: !important; }
+
+.wyda.past a:hover { color: grey; background-color: rgba(255, 0, 0, 0.5); text-decoration: line-through; }
+
+.nav>li>a { font-size: .8em; font-weight: 100; display: inline-block; letter-spacing: 0.04em;}
+
+.modal-content {box-shadow: none; border-radius: none; background-color: rgba(0, 0, 0, 1); border-radius: 0px; }
+
+
+
+
+
+body div.modal-body, body div.modal-header {color: #f3f3f3; border: none;}
+
+.close {font-size: 25px; text-shadow: none; color: rgba(255, 0, 0, 1); opacity: 1;}
+
+.modal-title {font-size: 1em; font-weight: 500;}
+
+#modalForm span {width: 11%;}
+
+body div.modal-body div.modal-body-button:hover {background-color: #6a0000; padding: 0; border-radius: 0;}
+
+body div.modal-body div.modal-body-button {background-color: #c40909; padding: 0; border-radius: 0;}
+
+input {background-color: rgba(49, 49, 49, 0.83); border: 0px;}
+
+.modal-footer {border: none;}
+
+body div.modal-footer {font-style: normal; padding: 15px; text-align: left; border-top: none; }
+
+.warsztaty {
+	padding-top: 10px;
+	a h3 {
+			color : lightblue;
+	}
+
+}
+
+.descriptionProgramEvent {
+	img {
+		&.imgEvent {
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+		}
+	}
+}
